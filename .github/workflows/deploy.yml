@@ -12,16 +12,16 @@ jobs:
       run: |
         echo "$FTP_CLUSTER"
         echo "$FTP_USER"
-        echo ${{ env.FTP_CLUSTER }}
-        echo ${{ env.FTP_USER }}
-        echo "${{ env.FTP_CLUSTER }}"
-        echo "${{ env.FTP_USER }}"
+        echo ${{ vars.FTP_CLUSTER }}
+        echo ${{ vars.FTP_USER }}
+        echo "${{ vars.FTP_CLUSTER }}"
+        echo "${{ vars.FTP_USER }}"
         echo ${{ secrets.FTP_PASSWORD }}
     
     - name: Upload files
       uses: SamKirkland/FTP-Deploy-Action@v4.3.5
       with:
-        server: ${{ env.FTP_CLUSTER }}
-        username: ${{ env.FTP_USER }}
+        server: ${{ vars.FTP_CLUSTER }}
+        username: ${{ vars.FTP_USER }}
         password: ${{ secrets.FTP_PASSWORD }}
         server-dir: ./www/
