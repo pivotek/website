@@ -1,5 +1,10 @@
-on: push
-name: Deploy website on push
+
+name: Deploy website to OVH
+
+on:
+  push:
+  workflow_dispatch:
+
 jobs:
   web-deploy:
     name: Deploy
@@ -7,16 +12,6 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v4
-
-    - name: tempo
-      run: |
-        echo "$FTP_CLUSTER"
-        echo "$FTP_USER"
-        echo ${{ vars.FTP_CLUSTER }}
-        echo ${{ vars.FTP_USER }}
-        echo "${{ vars.FTP_CLUSTER }}"
-        echo "${{ vars.FTP_USER }}"
-        echo ${{ secrets.FTP_PASSWORD }}
     
     - name: Upload files
       uses: SamKirkland/FTP-Deploy-Action@v4.3.5
