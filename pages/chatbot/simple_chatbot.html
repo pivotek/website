@@ -7,6 +7,7 @@
 		<meta http-equiv="X-UA-Compatible" content="ie=edge">
 		<link rel="stylesheet" href="./style.css">
 		<link rel="icon" href="./favicon.ico" type="image/x-icon">
+		<link href="https://cdn.jsdelivr.net/npm/@n8n/chat/style.css" rel="stylesheet" />
 		<style>
 			html, body {
 				margin:0;
@@ -19,34 +20,30 @@
 				height: 600px;
 				height:100%;
 			}
-				.left-container {
-				width: 70%;
-				background-color: lightgray;
-				height:100%;
-			}
-				.right-container {
-				width: 30%;
-				background-color: lightblue;
-				height:100%;
+			:root {
+				--chat--color-primary: #FEA116;
+				--chat--color-secondary: #FEA116;
+				--chat--color-dark: #0F172B;
+				--chat--color-primary-shade-50: #FEA116;
 			}
 		</style>
 		<script type="module">
+			window.open("https://airtable.com/app3mmqzYvO0QAimb/pagXblpkX2pQzpP6N", '_blank')
+
 			import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/chat.bundle.es.js';
-			
 			createChat({
 				webhookUrl: 'https://n8n.pivotek.fr/webhook/63d67250-ba6d-4df2-87d1-9bc55da2822c/chat',
-				target: '.right-container',
-				mode: 'fullscreen',
+				mode: 'window',
 				defaultLanguage: 'fr',
 				metadata: {},
 				initialMessages: [
 					"Salut ! 👋",
-					"Pose moi une question, j'essaierai d'y répondre."
+					'Je suis ton assistant "Restoran". Pose moi une question, j\'essaierai d\'y répondre.'
 				],
 				i18n: {
 					fr: {
-						title: 'Greg',
-						subtitle: "Assistant bailleur",
+						title: 'Restoran bot',
+						subtitle: 'Votre assistant "Restoran"',
 						inputPlaceholder: '',
 					},
 				},
@@ -54,14 +51,8 @@
     	</script>
 	</head>
 	<body>
-		<link href="https://cdn.jsdelivr.net/npm/@n8n/chat/style.css" rel="stylesheet" />
 		<div class="container">
-			<div class="left-container">
-				<iframe class="airtable-embed" src="https://airtable.com/embed/app3mmqzYvO0QAimb/shrjZAnGVmhnN6CZQ?backgroundColor=purple&viewControls=on" frameborder="0" onmousewheel="" width="100%" height="100%" style="background: transparent; border: 1px solid #ccc;"></iframe>
-			</div>
-			<div class="right-container">
-				<!-- Content for the right side -->
-			</div>
+			<iframe class="airtable-embed" src="../../templates/restoran/index.html" frameborder="0" onmousewheel="" width="100%" height="100%" style="background: transparent; border: 1px solid #ccc;"></iframe>
 		</div>
 	</body>
 </html>
