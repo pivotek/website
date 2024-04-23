@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pivotek - Catégrorisation d'emails</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #007BFF;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+        h1 {
+            font-size: 36px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+        .group {
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+        .title {
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .description {
+            margin-top: 5px;
+        }
+		.button {
+            background-color: gray;
+            border-radius: 10px;
+            padding: 10px;
+            color: white;
+			text-decoration: none;
+        }
+		.button:hover {
+            background-color: lightgray;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>
+			Pivotek - Catégrorisation d'emails
+		</h1>
+    </header>
+    <div class="container">
+		<div class="group">
+            <div class="description">
+				Cette automatisation catégorise les emails reçu sur <strong>pivotek.demo@gmail.com</strong> en fonction de leur contenu :<br><br>
+                - <strong>Information</strong> si le mail est à titre informatif mais ne requière aucune action ou réponse.<br>
+                - <strong>Action</strong> si vous devez faire quelque chose.<br>
+                - <strong>Réponse</strong> si l'envoyeur attend une réponse.<br><br>
+                Le label <strong>Urgent</strong> est ajouté en supplément si le mail est urgent.<br>
+                Un brouillon est automatiquement rédigé pour les emails catégorisés <strong>Réponse</strong>.
+            </div>
+            <br>
+			<a class="button" href="https://mail.google.com/mail/u/1/?pli=1#inbox" target="_blank">Ouvrir Gmail</a>
+			<a class="button" href="https://docs.google.com/spreadsheets/d/1jTasJtNdMflvL-xTt1TDRILlFGjDrqMJT9JOQYU5kdY/edit?usp=drive_web&ouid=114241336722550765811" target="_blank">Emails à envoyer</a>
+			<a class="button" href="https://n8n.pivotek.fr/webhook/demo/emails/send" target="_blank">Envoyer les emails</a>
+			<a class="button" href="https://n8n.pivotek.fr/webhook/demo/emails/delete" target="_blank">Supprimer les emails</a>
+        </div>
+    </div>
+</body>
+</html>
